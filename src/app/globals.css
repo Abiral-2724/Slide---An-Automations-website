@@ -80,6 +80,9 @@
   --sidebar-border: 240 3.7% 15.9%;
   --sidebar-ring: 217.2 91.2% 59.8%;
 }
+  .theme {
+    --animate-spinner-blade: spinner-blade 1s linear infinite;
+  }
 }
 
 @layer base {
@@ -171,4 +174,18 @@
   );
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+@theme inline {
+  @keyframes spinner-blade {
+  0% {
+    opacity: 0.85;
+    }
+  50% {
+    opacity: 0.25;
+    }
+  100% {
+    opacity: 0.25;
+    }
+  }
 }

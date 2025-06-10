@@ -14,7 +14,7 @@ const page = async (props: Props) => {
 
 
   return (
-    <div>page</div>
+    <div>pagellll</div>
   )
 }
 
