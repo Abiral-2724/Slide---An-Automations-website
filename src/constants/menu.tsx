@@ -1,7 +1,7 @@
 import { Activity, House, Rocket, Settings } from 'lucide-react'
 import {v4 as uuid} from 'uuid'
 
-type FieldProps = {
+export type FieldProps = {
     label : string
     id : string
 }

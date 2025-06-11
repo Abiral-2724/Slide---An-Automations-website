@@ -12,6 +12,7 @@ import Items from '../sidebar/Items'
 import CreateAutomation from '../create-automation'
 import Search from '../search'
 import Notifications from '../notifications/page'
+import MainBreadCrumb from '../bread-crumbs/main-bread-crumb'
 
 type Props = {
     slug : string
@@ -77,7 +78,10 @@ backdrop-blur-3xl"
 <CreateAutomation></CreateAutomation>
 <Notifications></Notifications>
 </div>
-
+<MainBreadCrumb 
+page={page == slug ? 'Home' : page}
+slug={slug}
+></MainBreadCrumb>
     </div>
   )
 }
