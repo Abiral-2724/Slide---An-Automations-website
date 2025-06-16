@@ -11,6 +11,8 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from '@/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
+import ReactQueryProvider from '@/providers/react-query-provider';
+import ReduxProvider from '@/providers/redux-provider';
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -32,7 +34,13 @@ export default function RootLayout({
             defaultTheme="dark"
             disableTransitionOnChange
           >
-           {children}
+            <ReduxProvider>
+            <ReactQueryProvider>
+            {children}
+            </ReactQueryProvider>
+            </ReduxProvider>
+            
+        
            <Toaster></Toaster>
           </ThemeProvider>
           </body>
